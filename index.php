@@ -32,7 +32,7 @@ if(!$_SESSION['sessionAccessToken']) {
         $realmId = $_GET['realmId'];
         $qbo->setRealmId($realmId);
         $qbo->setAccessDataToQBOSDK();
-        $token =  $qbo->setTokenObject();
+        $token =  $qbo->getTokenObject();
 
         //Saving Token Data to session
         $_SESSION['sessionAccessToken'] = serialize($token);
